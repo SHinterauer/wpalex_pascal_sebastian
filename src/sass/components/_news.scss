@@ -1,0 +1,25 @@
+@use './../abstract/index' as *;
+
+#news{
+    ul{
+        padding: $distancesmall;
+        background-color: $red;
+        border-radius: $borderradius;
+        font-size: $fontweight3;
+        padding: 0.6rem;
+
+        li{
+            display: flex;
+            padding: 0.6rem
+        }
+
+        #lastnews{
+            padding-bottom: 0;
+        }
+
+        a{
+            text-decoration: none;
+            color: $primarycolor;
+        }
+    }
+}

@@ -1,0 +1,16 @@
+{
+  "name": "ue04",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "rsync -vaE --progress ./src/php/ ./public/wp-content/themes/alex --delete && npx sass ./src/sass/styles.scss ./public/wp-content/themes/alex/style.css && rsync -vaE --progress ./src/favicons/ ./public/wp-content/themes/alex/favicons --delete && rsync -vaE --progress ./src/screenshot.png ./public/wp-content/themes/alex/screenshot.png --delete && rsync -vaE --progress ./src/images/ ./public/wp-content/themes/alex/images --delete && rsync -vaE --progress ./src/fonts/ ./public/wp-content/themes/alex/fonts --delete && npx esbuild src/js/burger.js --outdir=./public/wp-content/themes/alex/js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "esbuild": "^0.13.13",
+    "sass": "^1.43.4"
+  }
+}

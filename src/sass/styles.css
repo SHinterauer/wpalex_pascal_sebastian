@@ -1,0 +1,627 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+#services ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+#services ul #service1 {
+  background-color: #fffcdb;
+}
+#services ul #service2 {
+  background-color: #cdedfb;
+}
+#services ul #service3 {
+  background-color: #ddecd7;
+}
+#services ul li {
+  width: 25em;
+  border-radius: 0.4em;
+}
+#services ul li a {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  text-decoration: none;
+  font-size: 20pt;
+  color: #009ee3;
+}
+#services ul li a p {
+  margin: 1.5em auto;
+}
+#services ul li a img {
+  width: 60%;
+  height: auto;
+  margin: 0 auto 1.5em auto;
+}
+
+#news ul {
+  padding: 0.8em;
+  background-color: #f8dfd4;
+  border-radius: 0.4em;
+  font-size: 13pt;
+}
+#news ul li {
+  padding-bottom: 0.8em;
+}
+#news ul #lastnews {
+  padding-bottom: 0;
+}
+#news ul a {
+  text-decoration: none;
+  color: #009ee3;
+}
+
+#clients {
+  display: grid;
+  grid-template-columns: [line1] 1fr [line2] 1fr [line3] 1fr [line4] 1fr [line5] 1fr [line6] 1fr [line7] 1fr [line8] 1fr;
+  grid-template-rows: [row1] auto [row2] 1fr [row3] 1fr [row4] 0.5fr [row5] 0.5fr;
+  font-size: 20pt;
+}
+#clients cite {
+  font-style: normal;
+}
+#clients h2 {
+  grid-column-start: 1;
+  grid-column-end: 9;
+  grid-row-start: 1;
+  grid-row-end: 2;
+}
+#clients #ubuntu {
+  grid-column-start: 1;
+  grid-column-end: 4;
+  grid-row-start: 2;
+  grid-row-end: 6;
+  display: grid;
+  grid-template-columns: [line1] 1fr [line1] 1fr [line1] 1fr;
+  grid-template-rows: [row1] 1fr [row2] 1fr [row3] 1fr;
+  background-color: #fffcdb;
+}
+#clients #ubuntu img {
+  height: 90%;
+  width: 90%;
+  object-fit: cover;
+  margin: 0.2em;
+  grid-column-start: 1;
+  grid-column-end: 2;
+  grid-row-start: 1;
+  grid-row-end: 2;
+}
+#clients #ubuntu div {
+  grid-column-start: 1;
+  grid-column-end: 3;
+  grid-row-start: 2;
+  grid-row-end: 3;
+  padding: 1em 0 0 0.5em;
+}
+#clients #ubuntu blockquote {
+  grid-column-start: 1;
+  grid-column-end: 4;
+  grid-row-start: 3;
+  grid-row-end: 5;
+  padding: 2em 0 0 0.5em;
+}
+#clients #herzog {
+  grid-column-start: 2;
+  grid-column-end: 5;
+  grid-row-start: 2;
+  grid-row-end: 6;
+  display: grid;
+  grid-template-columns: [line1] 1fr [line1] 1fr [line1] 1fr;
+  grid-template-rows: [row1] 1fr [row2] 1fr [row3] 1fr;
+}
+#clients #herzog div {
+  grid-column-start: 1;
+  grid-column-end: 3;
+  grid-row-start: 1;
+  grid-row-end: 2;
+  background-color: #cdedfb;
+  text-align: right;
+  padding: 0.5em 0.5em 0 0;
+}
+#clients #herzog #imgherzog {
+  grid-column-start: 3;
+  grid-column-end: 4;
+  grid-row-start: 1;
+  grid-row-end: 2;
+  background-color: #cdedfb;
+  padding: 0;
+}
+#clients #herzog #imgherzog img {
+  height: 90%;
+  width: 90%;
+  object-fit: cover;
+  margin: 0.2em;
+}
+#clients #herzog blockquote {
+  grid-column-start: 2;
+  grid-column-end: 4;
+  grid-row-start: 2;
+  grid-row-end: 3;
+  background-color: #cdedfb;
+  padding: 1em 0 0 0.5em;
+}
+#clients #herzog p {
+  background-color: #cdedfb;
+  grid-column-start: 3;
+  grid-column-end: 4;
+  grid-row-start: 3;
+  grid-row-end: 4;
+}
+#clients #quote {
+  grid-column-start: 5;
+  grid-column-end: 6;
+  grid-row-start: 2;
+  grid-row-end: 4;
+  display: grid;
+  grid-template-columns: [line1] 1fr;
+  grid-template-rows: [row1] 1fr [row2] 1fr;
+  background-color: #03b7f1;
+  margin-bottom: 0.2em;
+}
+#clients #quote img {
+  width: 90%;
+  height: 90%;
+  margin: 0.2em;
+}
+#clients #boardofdirectors {
+  grid-column-start: 5;
+  grid-column-end: 9;
+  grid-row-start: 2;
+  grid-row-end: 6;
+  display: grid;
+  grid-template-columns: [line1] 1fr [line2] 1fr [line3] 1fr [line4] 1fr;
+  grid-template-rows: [row1] 1fr [row2] 1fr [row3] 0.5fr [row4] 0.5fr;
+  background-color: #ddecd7;
+}
+#clients #boardofdirectors div {
+  grid-column-start: 1;
+  grid-column-end: 5;
+  grid-row-start: 3;
+  grid-row-end: 4;
+  text-align: right;
+  padding: 0.5em 0.5em 0 0;
+}
+#clients #boardofdirectors #imgboardmueller {
+  grid-column-start: 2;
+  grid-column-end: 5;
+  grid-row-start: 1;
+  grid-row-end: 3;
+  padding: 0;
+}
+#clients #boardofdirectors #imgboardmueller img {
+  width: 97%;
+  height: 97%;
+  margin: 0.2em;
+  object-fit: cover;
+}
+#clients #boardofdirectors blockquote {
+  grid-column-start: 1;
+  grid-column-end: 5;
+  grid-row-start: 4;
+  grid-row-end: 5;
+  padding: 0 0 0.5em 0.5em;
+}
+
+footer {
+  background-color: #009ee3;
+  font-size: 13pt;
+  padding: 1.5em;
+  margin-top: 3em;
+  color: white;
+}
+footer nav {
+  width: 100%;
+  margin-bottom: 1.5em;
+}
+footer nav ul {
+  display: flex;
+  justify-content: space-between;
+}
+footer nav ul #trademark {
+  width: 80%;
+}
+footer nav ul #imprint {
+  border-right: #03b7f1 solid 2px;
+  padding-right: 0.7em;
+}
+footer nav ul #dataprotection {
+  padding-left: 0.7em;
+}
+footer p {
+  width: 50%;
+  margin-bottom: 1.5em;
+}
+footer div p {
+  width: 100%;
+  margin: 0.2em;
+}
+footer div ul {
+  list-style-type: disc;
+  font-size: 12pt;
+  margin-left: 2em;
+}
+footer a {
+  text-decoration: none;
+  color: white;
+}
+
+@font-face {
+  font-family: "Slabo 13px";
+  font-style: normal;
+  font-weight: 400;
+  src: url("./../../fonts/slabo-13px-v8-latin-regular.eot");
+  /* IE9 Compat Modes */
+  src: local(""), url("./../../fonts/slabo-13px-v8-latin-regular.eot?#iefix") format("embedded-opentype"), url("./../../fonts/slabo-13px-v8-latin-regular.woff2") format("woff2"), url("./../../fonts/slabo-13px-v8-latin-regular.woff") format("woff"), url("./../../fonts/slabo-13px-v8-latin-regular.ttf") format("truetype"), url("./../../fonts/slabo-13px-v8-latin-regular.svg#Slabo13px") format("svg");
+  /* Legacy iOS */
+}
+*,
+*:after,
+*:before {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Slabo 13px";
+}
+
+html {
+  font-size: 80%;
+}
+
+h2 {
+  font-size: 33pt;
+  color: #009ee3;
+  margin: 1em 0;
+  font-weight: normal;
+}
+
+#hero {
+  background-image: url(../images/illuminated-keyboard-1242287.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 30rem;
+}
+
+header {
+  width: 100%;
+}
+header #logo {
+  font-size: 33pt;
+  color: #009ee3;
+}
+header #button {
+  display: none;
+}
+header #navbar {
+  display: none;
+}
+header #nav_space {
+  display: flex;
+  justify-content: space-between;
+}
+header nav {
+  margin-top: 0px;
+  height: 50px;
+}
+header nav ul {
+  padding: 0;
+  margin: 0;
+  height: 100%;
+  list-style: none;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  font-size: 20pt;
+}
+header nav ul li {
+  margin-right: 12px;
+}
+header nav a {
+  text-decoration: none;
+  color: black;
+}
+header nav #first {
+  color: #009ee3;
+  border-bottom: 2px solid #009ee3;
+}
+header #hero {
+  position: relative;
+}
+header .herotext {
+  position: absolute;
+  right: 50px;
+  top: 50px;
+}
+header .herotext h2 {
+  color: #009ee3;
+  font-size: 33pt;
+  margin-bottom: 10px;
+}
+header .herotext h2 span {
+  box-shadow: 0 0 0 5px #fff;
+  background-color: #fff;
+  box-decoration-break: clone;
+  line-height: 1.5;
+}
+header .herotext a {
+  box-shadow: 0 0 0 5px #45b348;
+  background-color: #45b348;
+  color: white;
+  font-size: 20pt;
+  text-decoration: none;
+  border-radius: 1px;
+  padding: 2px;
+}
+
+.maxwidthcontainer {
+  max-width: 80rem;
+  margin: 0 auto;
+}
+
+/*-- Mobile Design --*/
+@media screen and (max-width: 800px) {
+  main {
+    padding: 0 10em 0 10em;
+  }
+  main h2 {
+    color: black;
+    font-size: 20pt;
+  }
+
+  header {
+    position: relative;
+  }
+  header #logo {
+    font-size: 33pt;
+    margin-bottom: 10px;
+  }
+  header #nav_space {
+    justify-content: space-between;
+    margin-right: 15px;
+    margin-left: 15px;
+    margin-top: 10px;
+  }
+  header #button {
+    display: block;
+    color: #009ee3;
+    padding-top: 25px;
+  }
+  header #navbar {
+    z-index: 10;
+    position: absolute;
+    height: 250px;
+    width: 100%;
+    background-color: white;
+    transition: all 1s;
+  }
+  header #navbar ul {
+    flex-direction: column;
+    align-items: baseline;
+    justify-content: flex-end;
+  }
+  header #navbar ul li {
+    border-top: 1px solid black;
+    width: 100%;
+    height: 100%;
+    padding-left: 10px;
+    display: flex;
+    align-items: center;
+  }
+  header #navbar ul li:last-child {
+    border-bottom: 1px solid black;
+  }
+  header #navbar ul li:first-child a {
+    color: #009ee3;
+  }
+  header #navbar ul li:hover {
+    background-color: #009ee3;
+  }
+  header #navbar ul li:hover a {
+    color: white;
+  }
+  header a {
+    cursor: pointer;
+    padding: 12px 0;
+  }
+  header a span {
+    position: relative;
+    display: block;
+    width: 20px;
+    height: 4px;
+    background: #009ee3;
+    transition: all 0.2s ease-in-out;
+  }
+  header a span:before, header a span:after {
+    position: absolute;
+    background: #009ee3;
+    content: "";
+    width: 20px;
+    height: 4px;
+    transition: all 0.2s ease-in-out;
+  }
+  header a span:before {
+    top: -8px;
+  }
+  header a span:after {
+    top: 8px;
+  }
+  header a.active span {
+    background: transparent;
+  }
+  header a.active span:before {
+    transform: rotate(45deg) translate(5px, 6px);
+  }
+  header a.active span:after {
+    transform: rotate(-45deg) translate(5px, -6px);
+  }
+  header nav {
+    display: none;
+  }
+  header nav ul {
+    font-size: 12pt;
+  }
+  header .herotext {
+    right: 20px;
+    top: 0px;
+  }
+
+  #services li {
+    margin-bottom: 20px;
+  }
+  #services li a p {
+    color: black;
+    font-size: 13pt;
+  }
+
+  #clients {
+    display: block;
+  }
+  #clients #ubuntu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  #clients #ubuntu img {
+    width: 97%;
+    height: 97%;
+    padding: 0.8em 0;
+  }
+  #clients #ubuntu div {
+    padding: 0.8em 0 0.8em 0.8em;
+    place-self: flex-start;
+  }
+  #clients #ubuntu blockquote {
+    padding: 0.8em 0 0.8em 0.8em;
+  }
+  #clients #herzog {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #cdedfb;
+    box-sizing: unset;
+  }
+  #clients #herzog #imgherzog {
+    width: 97%;
+    height: 97%;
+    place-self: center;
+    padding: 0.8em 0.5em 0 0;
+  }
+  #clients #herzog #imgherzog img {
+    width: 100%;
+    height: 100%;
+  }
+  #clients #herzog div {
+    padding: 0.8em 0 0.8em 0.8em;
+    place-self: flex-start;
+    text-align: left;
+  }
+  #clients #herzog blockquote {
+    padding: 0.8em 0 0.8em 0.5em;
+    place-self: flex-start;
+  }
+  #clients #boardofdirectors {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #ddecd7;
+  }
+  #clients #boardofdirectors #imgboardmueller {
+    width: 97%;
+    height: 97%;
+    place-self: center;
+    padding: 0.8em 0;
+  }
+  #clients #boardofdirectors #imgboardmueller img {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+  }
+  #clients #boardofdirectors div {
+    text-align: left;
+    padding: 0.8em 0 0.8em 0.8em;
+    place-self: flex-start;
+  }
+  #clients #quote {
+    display: block;
+  }
+  #clients #quote img {
+    width: 40%;
+    height: 40%;
+    margin: 0.8em;
+  }
+
+  footer {
+    padding: 1em;
+  }
+  footer p {
+    overflow: hidden;
+    font-size: 13pt;
+  }
+  footer nav ul {
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    font-size: 13pt;
+  }
+  footer nav ul #trademark {
+    width: 100%;
+  }
+  footer ul li p {
+    font-size: 12pt;
+  }
+}
+
+/*# sourceMappingURL=styles.css.map */

@@ -1,0 +1,56 @@
+@use './../abstract/index' as *;
+
+footer{
+    background-color: $primarycolor;
+    font-size: $fontweight3;
+    padding: $distance;
+    margin-top: 3em;
+    color: $white;
+
+    nav{
+        width: 100%;
+        margin-bottom: $distance;
+
+        ul{
+            display: flex;
+            justify-content: space-between;
+            list-style-type: none;
+
+            #trademark{
+                width: 80%;
+            }
+
+            #imprint{
+                border-right: $darkblue solid 2px;
+                padding-right: 0.7em;
+            }
+
+            #dataprotection{
+                padding-left: 0.7em;
+            }
+        }
+    }
+
+    p{
+        width: 50%;
+        margin-bottom: $distance;
+    }
+
+    div{
+        p{
+            width: 100%;
+            margin: 0.2em;
+        }
+
+        ul{
+            list-style-type: disc;
+            font-size: $fontweight4;
+            margin-left: 2em;
+        }
+    }
+
+    a{
+        text-decoration: none;
+        color: $white;
+    }
+}

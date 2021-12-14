@@ -1,0 +1,46 @@
+@use './../abstract/index' as *;
+
+#services{
+    ul{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        flex-wrap: wrap;
+        
+        #service1{
+            background-color: $yellow;
+        }
+
+        #service2{
+            background-color: $lightblue;
+        }
+
+        #service3{
+            background-color: $lightgreen;
+        }
+
+        li{
+            width: 25em;
+            border-radius: $borderradius;
+            
+            a{
+                display: flex;
+                flex-direction: column;
+                justify-content: space-around;
+                text-decoration: none;
+                font-size: $fontweight2;
+                color: $primarycolor;
+
+                p{
+                    margin: $distance auto;
+                }
+
+                img{
+                    width: 60%;
+                    height: auto;
+                    margin: 0 auto $distance auto;
+                }
+            }
+        }
+    }
+  }

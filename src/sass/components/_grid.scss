@@ -1,0 +1,180 @@
+@use './../abstract/index' as *;
+
+$widthhight: 90%;
+$marginaround: 0.2em;
+
+#clients{
+    display: grid;
+    grid-template-columns: [line1] 1fr [line2] 1fr [line3] 1fr [line4] 1fr [line5] 1fr [line6] 1fr [line7] 1fr [line8] 1fr;
+    grid-template-rows: [row1] auto [row2] 1fr [row3] 1fr [row4] 0.5fr [row5] 0.5fr;
+    font-size: $fontweight2;
+    
+    cite{
+        font-style: normal;
+    }
+
+    h2{
+        grid-column-start: 1;
+        grid-column-end: 9;
+        grid-row-start: 1;
+        grid-row-end: 2;
+    }
+
+    #grid1{
+        grid-column-start: 1;
+        grid-column-end: 4;
+        grid-row-start: 2;
+        grid-row-end: 6;
+        display: grid;
+        grid-template-columns: [line1] 1fr [line1] 1fr [line1] 1fr;
+        grid-template-rows: [row1] 1fr [row2] 1fr [row3] 1fr;
+        background-color: $yellow;
+
+            #imggrid1{
+                grid-column-start: 1;
+                grid-column-end: 2;
+                grid-row-start: 1;
+                grid-row-end: 2;
+                background-color: $yellow;
+                padding: 0;
+
+                img{
+                    height: $widthhight;
+                    width: $widthhight;
+                    object-fit: cover;
+                    margin: $marginaround;
+                }
+            }
+
+            div{
+                grid-column-start: 1;
+                grid-column-end: 3;
+                grid-row-start: 2;
+                grid-row-end: 3;
+                padding: 1em 0 0 0.5em;
+            }
+
+            blockquote{
+                grid-column-start: 1;
+                grid-column-end: 4;
+                grid-row-start: 3;
+                grid-row-end: 5;
+                padding: 2em 0 0 0.5em;
+            }
+    }
+
+    #grid2{
+        grid-column-start: 2;
+        grid-column-end: 5;
+        grid-row-start: 2;
+        grid-row-end: 6;
+        display: grid;
+        grid-template-columns: [line1] 1fr [line1] 1fr [line1] 1fr;
+        grid-template-rows: [row1] 1fr [row2] 1fr [row3] 1fr;
+
+            div{
+                grid-column-start: 1;
+                grid-column-end: 3;
+                grid-row-start: 1;
+                grid-row-end: 2;
+                background-color: $lightblue;
+                text-align: right;
+                padding: 0.5em 0.5em 0 0;
+            }
+
+            #imggrid2{
+                grid-column-start: 3;
+                grid-column-end: 4;
+                grid-row-start: 1;
+                grid-row-end: 2;
+                background-color: $lightblue;
+                padding: 0;
+
+                img{
+                    height: $widthhight;
+                    width: $widthhight;
+                    object-fit: cover;
+                    margin: $marginaround;
+                }
+            }
+
+            blockquote{
+                grid-column-start: 2;
+                grid-column-end: 4;
+                grid-row-start: 2;
+                grid-row-end: 3;
+                background-color: $lightblue;
+                padding: 1em 0 0 0.5em;
+            }
+            
+            p{
+                background-color: $lightblue;
+                grid-column-start: 3;
+                grid-column-end: 4;
+                grid-row-start: 3;
+                grid-row-end: 4;
+            }
+    }
+
+    #quote{
+        grid-column-start: 5;
+        grid-column-end: 6;
+        grid-row-start: 2;
+        grid-row-end: 4;
+        display: grid;
+        grid-template-columns: [line1] 1fr;
+        grid-template-rows: [row1] 1fr [row2] 1fr;
+        background-color: $darkblue;
+        margin-bottom: $marginaround;
+
+            img{
+                width: $widthhight;
+                height: $widthhight;
+                margin: $marginaround;
+            }
+    }
+
+    #grid3{
+        grid-column-start: 5;
+        grid-column-end: 9;
+        grid-row-start: 2;
+        grid-row-end: 6;
+        display: grid;
+        grid-template-columns: [line1] 1fr [line2] 1fr [line3] 1fr [line4] 1fr;
+        grid-template-rows: [row1] 1fr [row2] 1fr [row3] 0.5fr [row4] 0.5fr;
+        background-color: $lightgreen;
+
+            div{
+                grid-column-start: 1;
+                grid-column-end: 5;
+                grid-row-start: 3;
+                grid-row-end: 4;
+                text-align: right;
+                padding: 0.5em 0.5em 0 0;
+            }
+
+            #imggrid3{
+                grid-column-start: 2;
+                grid-column-end: 5;
+                grid-row-start: 1;
+                grid-row-end: 3;
+                padding: 0;
+
+                img{
+                    width: 97%;
+                    height: 97%;
+                    margin: $marginaround;
+                    object-fit: cover;
+                }
+            }
+
+            blockquote{
+                grid-column-start: 1;
+                grid-column-end: 5;
+                grid-row-start: 4;
+                grid-row-end: 5;
+
+                padding: 0 0 0.5em 0.5em;
+            }
+    }
+}
