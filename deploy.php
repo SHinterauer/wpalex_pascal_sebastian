@@ -1,4 +1,5 @@
 <?php
+
 namespace Deployer;
 
 require 'recipe/common.php';
@@ -7,7 +8,7 @@ require 'recipe/common.php';
 set('application', 'wpalex');
 
 // Project repository
-set('repository', 'https://github.com/YOUR-REPOSITORY-ON-GITHUB');
+set('repository', 'https://github.com/SHinterauer/wpalex_pascal_sebastian.git');
 
 // [Optional] Allocate tty for git clone. Default value is false.
 set('git_tty', true);
@@ -22,10 +23,10 @@ set('shared_dirs', ['public/wp-content/uploads']);
 set('allow_anonymous_stats', false);
 
 // Hosts
-host('vm-YOUR-FH-VM-COLOR.multimediatechnology.at')
+host('vm-brandy.multimediatechnology.at')
     ->user('admin')
-        ->port(5412)
-        ->set('deploy_path', '/home/admin/alex');
+    ->port(5412)
+    ->set('deploy_path', '/home/admin/alex');
 
 
 
